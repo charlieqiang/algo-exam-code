@@ -10,6 +10,16 @@ struct ListNode
     struct ListNode *next;
 };
 
+/**
+ * Reorder a linked list in the following manner:
+ * Given 1->2->3->4, reorder it to 1->4->2->3.
+ * The function modifies the list in place and does not return anything.
+ *
+ * @param head Pointer to the head of the linked list.
+ * This function reorders the linked list by first storing the nodes in an array,
+ *
+ * then rearranging the pointers to achieve the desired order.
+ */
 void reorderList(struct ListNode *head)
 {
     if (head == NULL)
