@@ -2,6 +2,26 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * @file UniqueTopoSequence-2024.c
+ * @brief 有向图邻接矩阵，求拓扑排序是否唯一
+ * 设计思想：
+ * 1. 计算每个顶点的入度。
+ * 2. 使用 Kahn 算法进行拓扑排序，检查在每一步中是否有唯一的入度为 0 的顶点。
+ * 3. 如果在任何一步中有多个顶点的入度为 0，则拓扑排序不是唯一的。
+ * 4. 如果所有顶点都被处理且每一步都有唯一的入度为 0 的顶点，则拓扑排序是唯一的。
+ * * @note
+ * 有向图邻接矩阵，求拓朴排序是否唯一
+ * 已知图 G 采用邻接矩阵存储是，其定义如下
+ * Typedef struct{ //图的类型
+ * Int numberVertices,numEgges; // 图的顶点数和有向边数
+ * Char VerticesList[maxV]; // 顶点表,MAXV 为已定义常量
+ * Int edge[maxV][maxV]; //邻接矩阵
+ * }MGraph;
+ * 判断 G 是否有唯一的拓扑序列，是 1 否返回 0
+ * (1)给出算法的设计思想。
+ * (2)根据算法思想，写出 C/C++描述，并注释。
+ */
 #define MAXV 5
 
 struct MGraph

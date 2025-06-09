@@ -2,6 +2,15 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * @file FindMinOfTrip-2020.c
+ * @brief 求三个数组中任意三个元素的绝对差之和的最小值
+ * 定义三元组(a,b,c)(其中a,b,c均为正数)的距离D=|a-b|+|b-c|+|c-a|。
+ * 给定3个非空整数集合S1、S2和S3，按升序分别存储在3个数组中。
+ * 设计一个尽可能高效的算法,计算并输出所有可能的三元组(a,b, c) (a∈S1, b ∈S2, c ∈S3)中的最小距离。
+ * 例如 S1={-1,0,9}，S2 = {-25,-10,10, 11}，S3 ={2,9,17,30, 41}，则最小距离为2，相应的三元组为(9,10,9)。
+ */
+
 #define MAXV 0x7fffffff
 
 int getAbs(int num)

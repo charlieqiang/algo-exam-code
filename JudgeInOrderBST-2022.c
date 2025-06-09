@@ -1,5 +1,15 @@
 #include <stdio.h>
 
+/**
+ * 已知非空二叉树 T 的结点值均为正整数，采用顺序存储方式保存，数据结构定义如下：
+ * typedef struct
+ * {
+ * int SqBiTNode[MAX_SIZE]; // 保存二叉树结点值的数组
+ * int ElemNum; // 实际占用的数组元素个数
+ * } SqBiTree;
+ * T 中不存在的结点在数组 SqBiTNode 中用-1 表示。
+ * 请设计一个尽可能高效的算法，判定一棵采用这种方式存储的二叉树是否为二叉搜索树，若 是，则返回 true，否则，返回 false。
+ */
 #define false 0
 #define ture 1
 #define MAX_SIZE 4

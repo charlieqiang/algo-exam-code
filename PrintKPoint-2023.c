@@ -2,6 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * 对于有向图，如果一个顶点的出度大于入度，则这个顶点称为K顶点，有向图用邻接矩阵存储，数据结构定义如下:
+ * typedef struct{
+ * int numVertex, numEdge;//顶点数，边数
+ * char VertexList[MAXV];//顶点表
+ * int Edge[MAXV][MAXV];//邻接矩阵
+ * }MGraph;
+ *
+ * 要求实现函数int printVertices(MGraph G)，输出有向图中所有K顶点，并返回K顶点的总数
+ */
 #define MAXV 2
 
 struct MGraph
