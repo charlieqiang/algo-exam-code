@@ -21,7 +21,7 @@ void inOrderTraversal(struct BTree *node, int deep)
         return;
     }
     else if (node->left == NULL && node->right == NULL)
-    {
+    {  
         printf("%s", node->data);
     }
     else
