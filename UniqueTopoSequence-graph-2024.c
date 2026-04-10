@@ -31,26 +31,6 @@ struct MGraph
     int Edge[MAXV][MAXV];
 };
 
-int uniquely(struct MGraph G);
-
-int main()
-{
-    struct MGraph graph;
-    graph.numVertices = MAXV;
-    graph.numEdges = MAXV;
-    strcpy(graph.VerticesList, "abcde");
-    int edge[MAXV][MAXV] = {{0, 1, 1, 0, 0}, {0, 0, 0, 1, 0}, {0, 0, 0, 1, 0}, {0, 0, 0, 0, 1}, {0, 0, 0, 0, 0}};
-    for (int i = 0; i < MAXV; i++)
-    {
-        for (int j = 0; j < MAXV; j++)
-        {
-            graph.Edge[i][j] = edge[i][j];
-        }
-    }
-    printf("%d\n", uniquely(graph));
-    return (0);
-}
-
 int uniquely(struct MGraph G)
 {
     int inDegree[MAXV] = {0};
@@ -94,4 +74,22 @@ int uniquely(struct MGraph G)
         }
     }
     return 1;
+}
+
+int main()
+{
+    struct MGraph graph;
+    graph.numVertices = MAXV;
+    graph.numEdges = MAXV;
+    strcpy(graph.VerticesList, "abcde");
+    int edge[MAXV][MAXV] = {{0, 1, 1, 0, 0}, {0, 0, 0, 1, 0}, {0, 0, 0, 1, 0}, {0, 0, 0, 0, 1}, {0, 0, 0, 0, 0}};
+    for (int i = 0; i < MAXV; i++)
+    {
+        for (int j = 0; j < MAXV; j++)
+        {
+            graph.Edge[i][j] = edge[i][j];
+        }
+    }
+    printf("%d\n", uniquely(graph));
+    return (0);
 }
